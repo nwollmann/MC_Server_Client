@@ -1,0 +1,47 @@
+[13:49:29] [main/INFO]: Setting user: Player848
+[13:49:30] [Client thread/INFO]: LWJGL Version: 2.9.0
+[13:49:33] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Example Mod
+[13:49:34] [Sound Library Loader/INFO]: Sound engine started
+[13:49:35] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[13:49:35] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[13:49:35] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Example Mod
+[13:49:35] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[13:49:35] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[13:49:36] [Sound Library Loader/INFO]: Sound engine started
+[13:49:36] [MCO Availability Checker #1/ERROR]: Couldn't connect to Realms
+[13:49:43] [Server thread/INFO]: Starting integrated minecraft server version 1.7.2
+[13:49:43] [Server thread/INFO]: Generating keypair
+[13:49:43] [Server thread/INFO]: Converting map!
+[13:49:43] [Server thread/INFO]: Scanning folders...
+[13:49:43] [Server thread/INFO]: Total conversion count is 0
+[13:49:44] [Server thread/INFO]: Preparing start region for level 0
+[13:49:45] [Server thread/INFO]: Preparing spawn area: 11%
+[13:49:46] [Server thread/INFO]: Preparing spawn area: 22%
+[13:49:47] [Server thread/INFO]: Preparing spawn area: 34%
+[13:49:48] [Server thread/INFO]: Preparing spawn area: 50%
+[13:49:49] [Server thread/INFO]: Preparing spawn area: 64%
+[13:49:50] [Server thread/INFO]: Preparing spawn area: 80%
+[13:49:51] [Server thread/INFO]: Preparing spawn area: 95%
+[13:49:51] [Server thread/INFO]: Player848[local:E:d701e2e8] logged in with entity id 188 at (-67.5, 67.0, -88.5)
+[13:49:51] [Server thread/INFO]: Player848 joined the game
+[13:49:54] [Client thread/INFO]: Warning: Clientside chunk ticking took 179 ms
+[13:49:57] [Server thread/INFO]: Saving and pausing game...
+[13:49:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:49:58] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:49:58] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:50:00] [Server thread/INFO]: Saving and pausing game...
+[13:50:00] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:50:01] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:50:01] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:50:03] [Server thread/INFO]: Saving and pausing game...
+[13:50:03] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:50:03] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:50:03] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:50:03] [Server thread/INFO]: Stopping server
+[13:50:03] [Server thread/INFO]: Saving players
+[13:50:04] [Server thread/INFO]: Saving worlds
+[13:50:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:50:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:50:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:50:12] [Client thread/INFO]: Connecting to virtualchemclass.com, 30000
+[13:50:22] [Client thread/INFO]: Stopping!
