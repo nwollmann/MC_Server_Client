@@ -1,0 +1,5 @@
+package tutorial.generic.client;
+
+public class ClientProxy {
+
+}

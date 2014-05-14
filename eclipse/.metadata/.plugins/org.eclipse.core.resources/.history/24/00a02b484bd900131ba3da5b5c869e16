@@ -1,0 +1,68 @@
+package youtube.tutorial;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import tutorial.generic.CommonProxy;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+
+@Mod(modid = TutorialMod.modid, name = TutorialMod.name, version = TutorialMod.version)
+public class TutorialMod {
+	
+	public static final String modid = "tutorial_mod";
+	public static final String name = "tutorial_mod";
+	public static final String version = "v0.0.0";
+	
+	public static Block freezerBlock;
+	
+	public static Block tutorialBlock;
+	public static Item tutorialItem;
+	
+	public static CreativeTabs mainTab = new CreativeTabs("mainTab"){
+		@Override
+		public Item getTabIconItem(){
+			return tutorialItem;
+		}
+	}; 
+	
+	//Says where the client and server 'proxy' code is loaded
+	@SidedProxy(clientSide = "tutorial.generic.client.ClientProxy", serverSide = "tutorial.generic.CommonProxy")
+	public static CommonProxy proxy;
+	
+	@Instance(modid)
+	public static TutorialMod instance;
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		
+		tutorialBlock = new TutorialBlock(Material.rock).setBlockName("tutorialBlock").setBlockTextureName("tutorial_mod:tutorialBlock").setCreativeTab(mainTab);
+		GameRegistry.registerBlock(tutorialBlock, tutorialBlock.getUnlocalizedName());
+		tutorialItem = new Item().setCreativeTab(mainTab).setUnlocalizedName("tutorialItem").setTextureName("tutorial_mod:tutorialItem");
+		GameRegistry.registerItem(tutorialItem, tutorialItem.getUnlocalizedName());
+	
+		freezerBlock = new FreezerBlock().setBlockName("freezer").setCreativeTab(mainTab);
+		GameRegistry.registerBlock(freezerBlock, freezerBlock.getUnlocalizedName());
+		GameRegistry.registerTileEntity(TileEntityFreezer.class, freezerBlock.getUnlocalizedName());
+		
+	}
+	
+	@EventHandler
+	public void load(FMLInitializationEvent event){
+		
+		proxy.registerRenderers();
+	}
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		
+	}
+}

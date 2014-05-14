@@ -1,0 +1,7 @@
+package youtube.tutorial;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityFreezer extends TileEntity {
+
+}

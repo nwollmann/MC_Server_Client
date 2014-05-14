@@ -1,0 +1,7 @@
+package com.rpgcraft.crafting;
+
+public class RecipeRegistry {
+	//Constants for block stacks
+	public static final ItemStack DIRT_STACK = new ItemStack(Block.getBlockFromName("dirt"));
+	
+}

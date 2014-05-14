@@ -1,0 +1,16 @@
+package youtube.tutorial;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class TutorialBlock extends Block {
+
+	protected TutorialBlock(Material p_i45394_1_) {
+		super(p_i45394_1_);
+	
+		setHardness(1.5F);
+		setResistance(10);
+		setLightLevel(10);
+	}
+
+}

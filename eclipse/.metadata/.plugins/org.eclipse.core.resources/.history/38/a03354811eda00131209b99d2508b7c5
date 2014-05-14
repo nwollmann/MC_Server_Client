@@ -1,0 +1,16 @@
+package com.rpgcraft;
+
+
+@Mod()
+public class RPGCraft {
+
+	//mod data
+	public static final String MODID = "RPGCraft";
+	public static final String NAME = "RPG Craft";
+	public static final String VERSION = "0.0.0";
+	
+	public static Item genericItem;
+	
+	
+	
+}

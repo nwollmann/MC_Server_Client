@@ -1,0 +1,48 @@
+package com.rpgcraft;
+
+import net.minecraft.item.Item;
+import sun.net.www.content.text.Generic;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
+
+@Mod(modid = RPGCraft.MODID, name = RPGCraft.NAME, version = RPGCraft.VERSION)
+public class RPGCraft {
+
+	//mod data
+	public static final String MODID = "RPGCraft";
+	public static final String NAME = "RPG Craft";
+	public static final String VERSION = "0.0.0";
+	
+	public static Item genericItem;
+	
+	//Singleton instance used by Forge
+	@Instance(value = "GenericModID")
+	public static Generic instance;
+	
+	//Says where the client and server 'proxy' code is located
+	@SidedProxy(clientSide = "com.rpgcraft.client.ClientProxy", serverSide = "com.rpgcraft.CommonProxy")
+	public static CommonProxy proxy;
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		
+	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event){
+		
+	}
+	
+	@EventHandler
+	public void postInitialization(FMLPostInitializationEvent event){
+		
+	}
+	
+	
+}

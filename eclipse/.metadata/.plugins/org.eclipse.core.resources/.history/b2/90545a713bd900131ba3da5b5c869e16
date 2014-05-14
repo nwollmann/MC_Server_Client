@@ -1,0 +1,11 @@
+package tutorial.generic;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
+
+
+@Mod(modid="GenericModID", name="Generic", version="0.0.0")
+public class Generic {
+
+	
+}

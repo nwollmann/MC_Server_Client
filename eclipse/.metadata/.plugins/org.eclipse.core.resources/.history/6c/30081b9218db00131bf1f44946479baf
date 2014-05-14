@@ -1,0 +1,65 @@
+package com.rpgcraft.gui;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
+
+import com.rpgcraft.RPGCraft;
+import com.rpgcraft.tiles.TileEntityFreezer;
+import com.sun.prism.paint.Color;
+
+public class SkillGui extends GuiContainer{
+	
+	public static ResourceLocation texture = new ResourceLocation(RPGCraft.MODID.toLowerCase(), "textures/gui/skillGui.png");
+	
+	@Override
+	public void initGui(){
+		super.initGui();
+		
+		
+		
+		guiLeft -= (256 - xSize)/2;
+		guiTop -= (256 - ySize)/2;
+		xSize = 256;
+		ySize = 256;
+		
+		//guiTop = guiTop - (190 - ySize)/2;
+		
+		//id, x, y, width, height, text
+		this.buttonList.add(new GuiButton(1, 10 + guiLeft, 225 + guiTop, 236, 20, "Change Profession"));
+		//this.buttonList.add(new GuiButton(2, 89 + guiLeft, 180 + guiTop, 82, 20, "Close"));
+	}
+
+	public SkillGui(InventoryPlayer player, TileEntityFreezer freezer) {
+		super(new ContainerFreezer(player, freezer));
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	protected void actionPerformed(GuiButton button){
+		switch(button.id){
+		case 1:
+			
+			break;
+		case 2:
+			System.out.println("Close Button Clicked!");
+			
+		}
+	}
+
+	@Override
+	protected void drawGuiContainerBackgroundLayer(float var1, int var2,
+			int var3) {
+		// TODO Auto-generated method stub
+		
+		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
+		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+		
+		//the top box!
+		this.draw
+		this.drawRect(guiLeft + 6, guiTop + 5, guiLeft + 184, guiTop + 35, 0);
+	}
+	
+}

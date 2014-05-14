@@ -1,0 +1,7 @@
+package tutorial.forum;
+
+@modid(modid="ForumTutorial", name="Forum Tutorial", version="0.0.0")
+public class Tutorial {
+
+	
+}

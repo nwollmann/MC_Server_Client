@@ -1,0 +1,5 @@
+tile.tutorialBlock.name=Tutorial Block
+item.tutorialItem.name=Tutorial Item
+itemGroup.tutorialTab=Tutorial Tab
+itemGroup.mainTab=Main Tab
+item.genericItem.name=Generic Item

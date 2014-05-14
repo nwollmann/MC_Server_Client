@@ -1,0 +1,7 @@
+package com.rpgcraft;
+
+public class CommonProxy {
+	public void registerRenderers(){
+		
+	}
+}

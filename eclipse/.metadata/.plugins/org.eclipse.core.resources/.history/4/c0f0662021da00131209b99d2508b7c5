@@ -1,0 +1,9 @@
+package tutorial.generic;
+
+public class CommonProxy {
+	
+	public void registerRenderers(){
+		//will be left blank since server need not render
+	}
+	
+}	

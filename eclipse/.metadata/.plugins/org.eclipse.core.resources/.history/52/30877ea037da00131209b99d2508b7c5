@@ -1,0 +1,5 @@
+package com.rpgcraft.tiles;
+
+public class GenericOre extends Block{
+
+}
