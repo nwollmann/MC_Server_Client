@@ -1,0 +1,8 @@
+package com.rpgcraft.gui;
+
+import net.minecraft.client.gui.inventory.GuiContainer;
+
+public class GuiItemInventory extends GuiContainer{
+	private float xSize_lo;
+	private float ySize_lo;
+}

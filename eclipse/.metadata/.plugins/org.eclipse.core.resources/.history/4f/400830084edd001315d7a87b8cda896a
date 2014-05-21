@@ -1,0 +1,5 @@
+package com.rpgcraft.gui;
+
+public class ContainerItem extends Container{
+
+}

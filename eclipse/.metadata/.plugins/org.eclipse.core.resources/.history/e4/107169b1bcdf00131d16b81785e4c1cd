@@ -1,0 +1,5 @@
+package com.rpgcraft.events;
+
+public class TutorialEventHandler {
+
+}

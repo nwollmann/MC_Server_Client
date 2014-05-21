@@ -41,7 +41,7 @@ public class FreezerBlock extends Block {
 		
 			return false;
 		}else{
-			FMLNetworkHandler.openGui(player, RPGCraft.instance, RPGCraft.GUI_FREEZER, world, x, y, z);
+			//FMLNetworkHandler.openGui(player, RPGCraft.instance, RPGCraft.GUI_FREEZER, world, x, y, z);
 			return true;
 		}
 	}

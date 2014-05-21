@@ -1,0 +1,7 @@
+package com.rpgcraft.packets;
+
+public abstract class AbstractPacket {
+	
+	public abstract void encodeInto(ChannelHandlerContext ctx, ByteBuf buffer);
+	
+}

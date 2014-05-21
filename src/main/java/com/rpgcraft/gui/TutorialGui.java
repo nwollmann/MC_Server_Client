@@ -5,6 +5,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.rpgcraft.RPGCraft;
+import com.rpgcraft.item.InventoryItem;
 import com.rpgcraft.tiles.TileEntityFreezer;
 
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -23,6 +24,14 @@ public class TutorialGui implements IGuiHandler {
 				
 				return new ContainerFreezer(player.inventory,(TileEntityFreezer) tileEntity);
 			//}
+				
+		case RPGCraft.GUI_SKILL:
+			
+			return new ContainerFreezer(player.inventory);
+			
+		case RPGCraft.GUI_ITEM_INV:
+			
+			return new ContainerItem(player, player.inventory, new InventoryItem(player.getHeldItem()));
 		}
 		
 		return null;
@@ -41,7 +50,13 @@ public class TutorialGui implements IGuiHandler {
 				
 				return new SkillGui(player.inventory,(TileEntityFreezer) tileEntity);
 			//}
+		case RPGCraft.GUI_SKILL:
+			return new SkillGui(player.inventory);
+			
+		case RPGCraft.GUI_ITEM_INV:
+			return new GuiItemInventory((ContainerItem) new ContainerItem(player, player.inventory, new InventoryItem(player.getHeldItem())));
 		}
+		
 		
 		return null;
 	}

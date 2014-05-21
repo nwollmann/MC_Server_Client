@@ -1,11 +1,11 @@
 package com.rpgcraft.gui;
 
-import com.rpgcraft.tiles.TileEntityFreezer;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.Slot;
+
+import com.rpgcraft.tiles.TileEntityFreezer;
+import com.rpgcraft.tiles.TileEntitySkillBlock;
 
 public class ContainerFreezer extends Container {
 	
@@ -28,6 +28,11 @@ public class ContainerFreezer extends Container {
 			}
 		} */
 		
+	}
+	public ContainerFreezer(InventoryPlayer inventory) {
+		// TODO Auto-generated constructor stub
+		
+		this.freezer = null;
 	}
 
 	@Override

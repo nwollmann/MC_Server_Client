@@ -1,0 +1,9 @@
+package com.rpgcraft.gui;
+
+import net.minecraft.client.gui.Gui;
+
+public class GuiBuffBar extends Gui{
+	private Minecraft mc;
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.rpgcraft.item;
+
+public class ItemStore extends Item{
+
+}

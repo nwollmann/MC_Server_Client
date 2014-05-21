@@ -2,13 +2,20 @@ package com.rpgcraft;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.Item;
-import sun.net.www.content.text.Generic;
+import net.minecraftforge.common.MinecraftForge;
+import advancedhud.KeyRegister;
 
 import com.rpgcraft.crafting.RecipeRegistry;
+import com.rpgcraft.events.RPGEventHandler;
+import com.rpgcraft.gui.GuiBuffBar;
 import com.rpgcraft.gui.TutorialGui;
 import com.rpgcraft.item.GenericItem;
+import com.rpgcraft.item.ItemStore;
+import com.rpgcraft.packets.PacketPipeline;
 import com.rpgcraft.tiles.FreezerBlock;
 import com.rpgcraft.tiles.GenericOre;
 import com.rpgcraft.tiles.SkillBlock;
@@ -16,6 +23,7 @@ import com.rpgcraft.tiles.TileEntityFreezer;
 import com.rpgcraft.tiles.TileEntitySkillBlock;
 import com.rpgcraft.tiles.TutorialBlock;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -36,9 +44,14 @@ public class RPGCraft {
 	public static final String VERSION = "0.0.0";
 	
 	public static final int GUI_FREEZER = 0;
+	public static final int GUI_SKILL = 1;
+	public static final int GUI_ITEM_INV = 2;
+	
+	public static final PacketPipeline packetPipeline = new PacketPipeline();
 	
 	public static Item genericItem;
 	public static Item genericIngot;
+	public static Item itemstore;
 	
 	public static Block tutorialBlock;
 	public static Item tutorialItem;
@@ -86,6 +99,11 @@ public class RPGCraft {
 		
 		GameRegistry.registerBlock(skillBlock, skillBlock.getUnlocalizedName());
 		GameRegistry.registerTileEntity(TileEntitySkillBlock.class, skillBlock.getUnlocalizedName());
+		
+		itemstore = new ItemStore().setUnlocalizedName("item_store").setCreativeTab(mainTab);
+		GameRegistry.registerItem(itemstore, itemstore.getUnlocalizedName());
+		
+		FMLCommonHandler.instance().bus().register(new RPGEventHandler());
 	}
 	
 	@EventHandler
@@ -93,11 +111,15 @@ public class RPGCraft {
 		proxy.registerRenderers();
 		RecipeRegistry.registerRecipes();
 		NetworkRegistry.INSTANCE.registerGuiHandler(MODID, new TutorialGui());
+		packetPipeline.initialise();
+		
 	}
 	
 	@EventHandler
 	public void postInitialization(FMLPostInitializationEvent event){
-		
+		packetPipeline.postInitialise();
+		//MinecraftForge.EVENT_BUS.register(new GuiBuffBar(Minecraft.getMinecraft()));
+		System.out.println("Well?");
 	}
 	
 	

@@ -1,0 +1,7 @@
+package com.rpgcraft.data;
+
+import net.minecraftforge.common.IExtendedEntityProperties;
+
+public class ExtendedPlayer implements IExtendedEntityProperties{
+
+}

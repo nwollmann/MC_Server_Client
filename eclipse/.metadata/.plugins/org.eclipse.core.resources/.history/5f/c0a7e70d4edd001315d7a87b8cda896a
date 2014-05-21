@@ -1,0 +1,7 @@
+package com.rpgcraft.gui;
+
+import net.minecraft.inventory.Container;
+
+public class ContainerItem extends Container{
+
+}

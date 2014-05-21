@@ -13,10 +13,9 @@
 D:\MC Server\MC_Server_Client\build\sources\java\com\rpgcraft\RPGCraft.java:7: warning: Generic is internal proprietary API and may be removed in a future release
 import sun.net.www.content.text.Generic;
                                ^
-D:\MC Server\MC_Server_Client\build\sources\java\com\rpgcraft\RPGCraft.java:57: warning: Generic is internal proprietary API and may be removed in a future release
-	public static Generic instance;
-	              ^
-3 warnings
+Note: D:\MC Server\MC_Server_Client\build\sources\java\com\rpgcraft\gui\SkillGui.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+2 warnings
 
 :processResources
 :classes
@@ -34,4 +33,4 @@ D:\MC Server\MC_Server_Client\build\sources\java\com\rpgcraft\RPGCraft.java:57: 
 
 BUILD SUCCESSFUL
 
-Total time: 13.81 secs
+Total time: 48.262 secs
