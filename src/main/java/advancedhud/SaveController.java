@@ -14,6 +14,8 @@ import net.minecraft.util.ReportedException;
 import advancedhud.api.HUDRegistry;
 import advancedhud.api.HudItem;
 
+import com.rpgcraft.RPGCraft;
+
 public class SaveController {
     protected static final String dirName = Minecraft.getMinecraft().mcDataDir + File.separator + "config" + File.separator + "AdvancedHud";
     protected static File dir = new File(dirName);
@@ -32,10 +34,10 @@ public class SaveController {
         File file = new File(dir, fileName);
 
         if (!file.exists()) {
-            AdvancedHUD.log.warn("Config load canceled, file does not exist. This is normal for first run.");
+            RPGCraft.log.warn("Config load canceled, file does not exist. This is normal for first run.");
             return false;
         } else {
-            AdvancedHUD.log.info("Config load successful.");
+            RPGCraft.log.info("Config load successful.");
         }
         try {
             NBTTagCompound nbt = CompressedStreamTools.readCompressed(new FileInputStream(file));
@@ -57,7 +59,7 @@ public class SaveController {
     }
 
     public static void saveConfig(String name, String dirName) {
-        AdvancedHUD.log.info("Saving...");
+        RPGCraft.log.info("Saving...");
 
         if (dirName != null) {
             HUDRegistry.getMinecraftInstance();

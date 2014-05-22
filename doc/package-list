@@ -1,0 +1,14 @@
+advancedhud
+advancedhud.api
+advancedhud.client
+advancedhud.client.ui
+com.rpgcraft
+com.rpgcraft.client
+com.rpgcraft.crafting
+com.rpgcraft.data
+com.rpgcraft.events
+com.rpgcraft.gui
+com.rpgcraft.gui.hud.items
+com.rpgcraft.item
+com.rpgcraft.packets
+com.rpgcraft.tiles

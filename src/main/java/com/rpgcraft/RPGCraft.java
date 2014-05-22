@@ -1,5 +1,7 @@
 package com.rpgcraft;
 
+import org.apache.logging.log4j.Logger;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -8,11 +10,25 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import advancedhud.KeyRegister;
+import advancedhud.TickHandler;
+import advancedhud.api.HUDRegistry;
 
 import com.rpgcraft.crafting.RecipeRegistry;
 import com.rpgcraft.events.RPGEventHandler;
 import com.rpgcraft.gui.GuiBuffBar;
 import com.rpgcraft.gui.TutorialGui;
+import com.rpgcraft.gui.hud.items.HudItemAir;
+import com.rpgcraft.gui.hud.items.HudItemArmor;
+import com.rpgcraft.gui.hud.items.HudItemBossBar;
+import com.rpgcraft.gui.hud.items.HudItemCrosshairs;
+import com.rpgcraft.gui.hud.items.HudItemExperienceBar;
+import com.rpgcraft.gui.hud.items.HudItemFood;
+import com.rpgcraft.gui.hud.items.HudItemHealth;
+import com.rpgcraft.gui.hud.items.HudItemHealthMount;
+import com.rpgcraft.gui.hud.items.HudItemHotbar;
+import com.rpgcraft.gui.hud.items.HudItemJumpBar;
+import com.rpgcraft.gui.hud.items.HudItemRecordDisplay;
+import com.rpgcraft.gui.hud.items.HudItemTooltips;
 import com.rpgcraft.item.GenericItem;
 import com.rpgcraft.item.ItemStore;
 import com.rpgcraft.packets.PacketPipeline;
@@ -42,6 +58,7 @@ public class RPGCraft {
 	public static final String MODID = "rpgcraft";
 	public static final String NAME = "RPG Craft";
 	public static final String VERSION = "0.0.0";
+	public static Logger log;
 	
 	public static final int GUI_FREEZER = 0;
 	public static final int GUI_SKILL = 1;
@@ -79,6 +96,7 @@ public class RPGCraft {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
+		log = event.getModLog();
 		genericItem = new GenericItem();
 		GameRegistry.registerItem(genericItem, genericItem.getUnlocalizedName());
 		
@@ -100,7 +118,7 @@ public class RPGCraft {
 		GameRegistry.registerBlock(skillBlock, skillBlock.getUnlocalizedName());
 		GameRegistry.registerTileEntity(TileEntitySkillBlock.class, skillBlock.getUnlocalizedName());
 		
-		itemstore = new ItemStore().setUnlocalizedName("item_store").setCreativeTab(mainTab);
+		itemstore = new ItemStore().setUnlocalizedName("item_store").setCreativeTab(mainTab);	
 		GameRegistry.registerItem(itemstore, itemstore.getUnlocalizedName());
 		
 		FMLCommonHandler.instance().bus().register(new RPGEventHandler());
@@ -113,6 +131,10 @@ public class RPGCraft {
 		NetworkRegistry.INSTANCE.registerGuiHandler(MODID, new TutorialGui());
 		packetPipeline.initialise();
 		
+		FMLCommonHandler.instance().bus().register(new TickHandler());
+        FMLCommonHandler.instance().bus().register(new KeyRegister());
+
+        registerHUDItems();
 	}
 	
 	@EventHandler
@@ -122,5 +144,20 @@ public class RPGCraft {
 		System.out.println("Well?");
 	}
 	
+	private void registerHUDItems(){
+		HUDRegistry.registerHudItem(new HudItemHotbar());
+        HUDRegistry.registerHudItem(new HudItemHealth());
+        HUDRegistry.registerHudItem(new HudItemAir());
+        HUDRegistry.registerHudItem(new HudItemFood());
+        HUDRegistry.registerHudItem(new HudItemArmor());
+        HUDRegistry.registerHudItem(new HudItemBossBar());
+        HUDRegistry.registerHudItem(new HudItemJumpBar());
+        HUDRegistry.registerHudItem(new HudItemHealthMount());
+        HUDRegistry.registerHudItem(new HudItemExperienceBar());
+        HUDRegistry.registerHudItem(new HudItemCrosshairs());
+        HUDRegistry.registerHudItem(new HudItemTooltips());
+        HUDRegistry.registerHudItem(new HudItemRecordDisplay());
+        HUDRegistry.setInitialLoadComplete(true);
+	}
 	
 }

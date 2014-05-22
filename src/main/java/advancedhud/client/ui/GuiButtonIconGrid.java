@@ -7,9 +7,10 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-import advancedhud.AdvancedHUD;
 import advancedhud.api.HUDRegistry;
 import advancedhud.api.RenderAssist;
+
+import com.rpgcraft.RPGCraft;
 
 public class GuiButtonIconGrid extends GuiButton {
 
@@ -62,7 +63,7 @@ public class GuiButtonIconGrid extends GuiButton {
             selectedIconX = ((mouseXTmp) - (mouseXTmp)%8) - xPosition - 3;
             selectedIconY = ((mouseY) - (mouseY)%8) - yPosition;
         }
-        AdvancedHUD.log.info("Selected Icon: "+selectedIconX+","+selectedIconY);
+        RPGCraft.log.info("Selected Icon: "+selectedIconX+","+selectedIconY);
         return super.mousePressed(mc, mouseX, mouseY);
     }
 

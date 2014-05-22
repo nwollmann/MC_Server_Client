@@ -1,7 +1,0 @@
-package com.rpgcraft.tiles;
-
-import net.minecraft.block.Block;
-
-public class SkillBlock extends Block {
-
-}

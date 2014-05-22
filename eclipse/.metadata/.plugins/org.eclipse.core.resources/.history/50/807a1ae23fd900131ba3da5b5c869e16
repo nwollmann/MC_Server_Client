@@ -1,9 +1,0 @@
-package tutorial.forum;
-
-import cpw.mods.fml.common.Mod;
-
-@modid(modid="ForumTutorial", name="Forum Tutorial", version="0.0.0")
-public class Tutorial {
-
-	
-}

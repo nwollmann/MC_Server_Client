@@ -1,8 +1,6 @@
 package advancedhud.client;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
 import net.minecraft.client.Minecraft;
@@ -13,8 +11,6 @@ import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.scoreboard.ScorePlayerTeam;
@@ -29,12 +25,12 @@ import net.minecraftforge.client.GuiIngameForge;
 
 import org.lwjgl.opengl.GL11;
 
-import com.rpgcraft.RPGCraft;
-
-import advancedhud.AdvancedHUD;
 import advancedhud.api.HUDRegistry;
 import advancedhud.api.HudItem;
 import advancedhud.api.RenderAssist;
+
+import com.rpgcraft.RPGCraft;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 
 public class GuiAdvancedHUD extends GuiIngameForge {
@@ -130,7 +126,7 @@ public class GuiAdvancedHUD extends GuiIngameForge {
 
         if (mc.gameSettings.showDebugInfo) {
             GL11.glPushMatrix();
-            left.add("Minecraft " + AdvancedHUD.MC_VERSION + " (" + mc.debug + ")");
+            left.add("Minecraft 1.7.2 (" + mc.debug + ")");
             left.add(mc.debugInfoRenders());
             left.add(mc.getEntityDebug());
             left.add(mc.debugInfoEntities());

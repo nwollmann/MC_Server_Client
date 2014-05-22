@@ -1,12 +1,12 @@
 package advancedhud.client.ui;
 
-import com.rpgcraft.gui.hud.items.HudItemCrosshairs;
-
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import advancedhud.AdvancedHUD;
 import advancedhud.api.HUDRegistry;
 import advancedhud.api.HudItem;
+
+import com.rpgcraft.RPGCraft;
+import com.rpgcraft.gui.hud.items.HudItemCrosshairs;
 
 public class GuiScreenHudItem extends GuiScreen {
 
@@ -57,7 +57,7 @@ public class GuiScreenHudItem extends GuiScreen {
         } else if (par1GuiButton.id == 100) {
             hudItem.rotate();
         }
-        AdvancedHUD.log.info("Clicked button " + par1GuiButton.id);
+        RPGCraft.log.info("Clicked button " + par1GuiButton.id);
         super.actionPerformed(par1GuiButton);
     }
 

@@ -1,7 +1,0 @@
-package youtube.tutorial;
-
-import net.minecraft.block.Block;
-
-public class TutorialBlock extends Block {
-
-}
