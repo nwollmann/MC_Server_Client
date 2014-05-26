@@ -1,15 +1,16 @@
 package com.rpgcraft.gui.hud.items;
 
+import com.rpgcraft.api.Alignment;
+import com.rpgcraft.api.HUDRegistry;
+import com.rpgcraft.api.HudItem;
+import com.rpgcraft.gui.GuiAdvancedHUDConfiguration;
+import com.rpgcraft.gui.GuiScreenHudItem;
+import com.rpgcraft.gui.GuiScreenReposition;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.item.ItemStack;
-import advancedhud.api.Alignment;
-import advancedhud.api.HUDRegistry;
-import advancedhud.api.HudItem;
-import advancedhud.client.ui.GuiAdvancedHUDConfiguration;
-import advancedhud.client.ui.GuiScreenHudItem;
-import advancedhud.client.ui.GuiScreenReposition;
 
 public class HudItemTooltips extends HudItem {
 

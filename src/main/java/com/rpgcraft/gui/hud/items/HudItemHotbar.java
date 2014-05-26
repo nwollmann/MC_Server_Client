@@ -10,11 +10,11 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import advancedhud.api.Alignment;
-import advancedhud.api.HUDRegistry;
-import advancedhud.api.HudItem;
-import advancedhud.api.RenderAssist;
-import advancedhud.client.ui.GuiScreenHudItem;
+import com.rpgcraft.api.Alignment;
+import com.rpgcraft.api.HUDRegistry;
+import com.rpgcraft.api.HudItem;
+import com.rpgcraft.api.RenderAssist;
+import com.rpgcraft.gui.GuiScreenHudItem;
 
 public class HudItemHotbar extends HudItem {
 

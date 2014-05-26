@@ -9,6 +9,10 @@ import com.rpgcraft.data.ExtendedPlayer;
 
 import cpw.mods.fml.common.network.ByteBufUtils;
 
+/**
+ * This is for ensuring that the client uses server data for extended player properties so they can't cheat.
+ * @author Nicholas Wollmann
+ */
 public class SyncPlayerPropsPacket extends AbstractPacket
 {
 	// Previously, we've been writing each field in our properties one at a time,

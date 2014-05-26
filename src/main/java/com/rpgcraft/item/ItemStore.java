@@ -11,8 +11,16 @@ import com.rpgcraft.RPGCraft;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * Item which opens up an inventory when you right click with it.
+ * @author Nicholas Wollmann
+ *
+ */
 public class ItemStore extends Item{
 	
+	/**
+	 * Standard constructor.
+	 */
 	public ItemStore(){
 		super();
 		setMaxStackSize(1);

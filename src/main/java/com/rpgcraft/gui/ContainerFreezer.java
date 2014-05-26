@@ -7,6 +7,10 @@ import net.minecraft.inventory.Container;
 import com.rpgcraft.tiles.TileEntityFreezer;
 import com.rpgcraft.tiles.TileEntitySkillBlock;
 
+/**
+ * More tutorial code that will be soon outdated. YAY!!!
+ * @author Nicholas Wollmann
+ */
 public class ContainerFreezer extends Container {
 	
 	public TileEntityFreezer freezer;

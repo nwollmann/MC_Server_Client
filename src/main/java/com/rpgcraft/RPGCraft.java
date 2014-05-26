@@ -9,10 +9,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
-import advancedhud.KeyRegister;
-import advancedhud.TickHandler;
-import advancedhud.api.HUDRegistry;
 
+import com.rpgcraft.api.HUDRegistry;
 import com.rpgcraft.crafting.RecipeRegistry;
 import com.rpgcraft.events.RPGEventHandler;
 import com.rpgcraft.gui.GuiBuffBar;
@@ -50,7 +48,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-
+/**
+ * The core class of the mod which makes all of the initial setup calls.
+ * @author Nicholas Wollmann
+ */
 @Mod(modid = RPGCraft.MODID, name = RPGCraft.NAME, version = RPGCraft.VERSION)
 public class RPGCraft {
 
@@ -79,6 +80,9 @@ public class RPGCraft {
 	
 	public static Block skillBlock;
 	
+	/**
+	 * A new tab for the crative mode inventory.
+	 */
 	public static CreativeTabs mainTab = new CreativeTabs("mainTab"){
 		@Override
 		public Item getTabIconItem(){
@@ -94,6 +98,9 @@ public class RPGCraft {
 	@SidedProxy(clientSide = "com.rpgcraft.client.ClientProxy", serverSide = "com.rpgcraft.CommonProxy")
 	public static CommonProxy proxy;
 	
+	/**
+	 * Called by the engine.
+	 */
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		log = event.getModLog();
@@ -124,6 +131,9 @@ public class RPGCraft {
 		FMLCommonHandler.instance().bus().register(new RPGEventHandler());
 	}
 	
+	/**
+	 * Called by the engine.
+	 */
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		proxy.registerRenderers();
@@ -137,6 +147,9 @@ public class RPGCraft {
         registerHUDItems();
 	}
 	
+	/**
+	 * Called by the engine.
+	 */
 	@EventHandler
 	public void postInitialization(FMLPostInitializationEvent event){
 		packetPipeline.postInitialise();
@@ -144,6 +157,9 @@ public class RPGCraft {
 		System.out.println("Well?");
 	}
 	
+	/**
+	 * Called by init. Registers instances of HUD Items so that they will be properly rendered.
+	 */
 	private void registerHUDItems(){
 		HUDRegistry.registerHudItem(new HudItemHotbar());
         HUDRegistry.registerHudItem(new HudItemHealth());

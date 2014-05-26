@@ -3,6 +3,12 @@ package com.rpgcraft.gui.hud.items;
 import java.util.Collection;
 import java.util.Iterator;
 
+import com.rpgcraft.api.Alignment;
+import com.rpgcraft.api.HUDRegistry;
+import com.rpgcraft.api.HudItem;
+import com.rpgcraft.api.RenderAssist;
+import com.rpgcraft.gui.GuiScreenHudItem;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.scoreboard.Score;
@@ -10,11 +16,6 @@ import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.util.EnumChatFormatting;
-import advancedhud.api.Alignment;
-import advancedhud.api.HUDRegistry;
-import advancedhud.api.HudItem;
-import advancedhud.api.RenderAssist;
-import advancedhud.client.ui.GuiScreenHudItem;
 
 public class HudItemScoreboard extends HudItem {
 

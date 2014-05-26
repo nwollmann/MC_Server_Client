@@ -10,8 +10,15 @@ import com.rpgcraft.tiles.TileEntityFreezer;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 
+/**
+ * Part of a tutorial. TO BE REMOVED.
+ * @author Nicholas Wollmann
+ */
 public class TutorialGui implements IGuiHandler {
 
+	/**
+	 * Called by the server.
+	 */
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
@@ -37,6 +44,9 @@ public class TutorialGui implements IGuiHandler {
 		return null;
 	}
 
+	/**
+	 * Called by the client.
+	 */
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {

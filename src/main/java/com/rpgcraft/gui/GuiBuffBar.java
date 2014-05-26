@@ -18,11 +18,19 @@ import com.rpgcraft.RPGCraft;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
+/**
+ * Draws a buff bar in the upper-left corner of the screen. TO BE REMOVED.
+ * @author Nicholas Wollmann
+ */
 public class GuiBuffBar extends Gui{
 	public static ResourceLocation texture = new ResourceLocation(RPGCraft.MODID.toLowerCase(), "textures/gui/skillGui.png");
 	
 	private Minecraft mc;
 	
+	/**
+	 * Standard constructor.
+	 * @param mc The minecraft instance.
+	 */
 	public GuiBuffBar(Minecraft mc){
 		super();
 		
@@ -37,6 +45,9 @@ public class GuiBuffBar extends Gui{
 	private static final int BUFF_ICONS_PER_ROW = 8;
 	
 	//called by GuiIngameForge each frame
+	/**
+	 * Triggers every time the experience bar is refreshed. Called by the engine.
+	 */
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public void onRenderExperienceBar(RenderGameOverlayEvent event){
 		if(event.isCancelable() || event.type != ElementType.EXPERIENCE) return;

@@ -4,6 +4,10 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 
+/**
+ * From a tutorial. Just an interface for packets to follow.
+ * @author Nicholas Wollmann
+ */
 public abstract class AbstractPacket {
 	
 	 /**

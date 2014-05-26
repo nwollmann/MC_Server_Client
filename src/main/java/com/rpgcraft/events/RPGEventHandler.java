@@ -12,8 +12,15 @@ import com.rpgcraft.data.ExtendedPlayer;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 
+/**
+ * A generic event handler for anything our mod might have as a trigger. Will likely get refractored into multiple handlers as the project grows.
+ * @author Nicholas Wollmann
+ */
 public class RPGEventHandler
 {
+	/**
+	 * Called by engine on entity construction.
+	 */
 	@SubscribeEvent
 	public void onEntityConstructing(EntityConstructing event){
 		/*
@@ -36,6 +43,9 @@ Be sure to check if the entity being constructed is the correct type for the ext
 	}
 
 	
+	/**
+	 * Called by engine when a player logs in.
+	 */
 	@SubscribeEvent
 	public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event){
 		event.player.getAttributeMap().getAttributeInstance(SharedMonsterAttributes.maxHealth).setBaseValue(40);
@@ -43,6 +53,9 @@ Be sure to check if the entity being constructed is the correct type for the ext
 		event.player.setHealth(35);
 	}
 
+	/**
+	 * Called by engine when some creature falls some blocks.
+	 */
 	@SubscribeEvent
 	public void onLivingFallEvent(LivingFallEvent event)
 	{

@@ -6,6 +6,10 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
 
+/**
+ * Allows for the player object holding extra data. A lot of this code is borrowed from a tutorial and needs to be refined for our mod.
+ * @author Nicholas Wollmann
+ */
 public class ExtendedPlayer implements IExtendedEntityProperties
 {
 	/*
@@ -60,6 +64,9 @@ Also, it's best to initialize any other variables you may have added, just like 
 
 
 	// Save any custom data that needs saving here
+	/**
+	 * Custom saving. 
+	 */
 	@Override
 	public void saveNBTData(NBTTagCompound compound)
 	{
@@ -77,6 +84,9 @@ Now add our custom tag to the player's tag with a unique name (our property's na
 	}
 
 	// Load whatever data you saved
+	/**
+	 * Custom loading.
+	 */
 	@Override
 	public void loadNBTData(NBTTagCompound compound)
 	{
@@ -118,14 +128,23 @@ That's it for the IExtendedEntityProperties methods, but we need to add a few of
 
 	}
 	
+	/**
+	 * Returns the player's current mana.
+	 */
 	public int getCurrentMana(){
 		return currentMana;
 	}
 	
+	/**
+	 * Returns the player's max health - TO BE REMOVED.
+	 */
 	public int getMaxHealth(){
 		return maxHealth;
 	}
 	
+	/**
+	 * Sets the player's max health - TO BE REMOVED.
+	 */
 	public void setMaxHealth(int max){
 		maxHealth = max;
 	}
@@ -138,6 +157,9 @@ That's it for the IExtendedEntityProperties methods, but we need to add a few of
 		this.currentMana = this.maxMana;
 	}
 
+	/**
+	 * Reutns the player's maximum mana.
+	 */
 	public int getMaxMana() {
 		return maxMana;
 	}

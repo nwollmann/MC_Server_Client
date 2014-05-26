@@ -15,6 +15,10 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * Tutorial code. To be ripped out before end version.
+ * @author Nicholas Wollmann
+ */
 @SideOnly(Side.CLIENT)
 public class GuiManaBar extends Gui
 {
@@ -29,13 +33,17 @@ https://github.com/coolAlias/Forge_Tutorials/tree/master/textures/gui
 	 */
 	private static final ResourceLocation texturepath = new ResourceLocation("tutorial", "textures/gui/mana_bar.png");
 
+	/**
+	 * Standard constructor. 
+	 * @param mc The minecraft instance.
+	 */
 	public GuiManaBar(Minecraft mc)
 	{
 		super();
 		// We need this to invoke the render engine.
 		this.mc = mc;
 	}
-
+ 
 	//
 	// This event is called by GuiIngameForge during each frame by
 	// GuiIngameForge.pre() and GuiIngameForce.post().

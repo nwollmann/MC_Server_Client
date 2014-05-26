@@ -2,18 +2,19 @@ package com.rpgcraft.gui.hud.items;
 
 import org.lwjgl.opengl.GL11;
 
+import com.rpgcraft.api.Alignment;
+import com.rpgcraft.api.HUDRegistry;
+import com.rpgcraft.api.HudItem;
+import com.rpgcraft.api.RenderAssist;
+import com.rpgcraft.gui.GuiAdvancedHUDConfiguration;
+import com.rpgcraft.gui.GuiScreenHudItem;
+import com.rpgcraft.gui.GuiScreenReposition;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.MathHelper;
-import advancedhud.api.Alignment;
-import advancedhud.api.HUDRegistry;
-import advancedhud.api.HudItem;
-import advancedhud.api.RenderAssist;
-import advancedhud.client.ui.GuiAdvancedHUDConfiguration;
-import advancedhud.client.ui.GuiScreenHudItem;
-import advancedhud.client.ui.GuiScreenReposition;
 
 public class HudItemAir extends HudItem {
 

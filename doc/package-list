@@ -1,8 +1,5 @@
-advancedhud
-advancedhud.api
-advancedhud.client
-advancedhud.client.ui
 com.rpgcraft
+com.rpgcraft.api
 com.rpgcraft.client
 com.rpgcraft.crafting
 com.rpgcraft.data

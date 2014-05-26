@@ -7,12 +7,20 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.util.Constants;
 
+/**
+ * This is an item which holds its own inventory. It is part of a tutorial.
+ * @author Nicholas Wollmann
+ */
 public class InventoryItem implements IInventory{
 	private String name = "Inventory Item"; //the name
 	public static final int INV_SIZE = 8; //inventory maximum size
 	private ItemStack[] inventory = new ItemStack[INV_SIZE];
 	private final ItemStack invItem; //provides NBT tag compound to reference
 	
+	/**
+	 * Constructs an instance with given stack.
+	 * @param stack
+	 */
 	public InventoryItem(ItemStack stack)
 	{
 		invItem = stack; //the stack this inventory belongs to

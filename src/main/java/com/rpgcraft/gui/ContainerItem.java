@@ -8,6 +8,10 @@ import net.minecraft.item.ItemStack;
 
 import com.rpgcraft.item.InventoryItem;
 
+/**
+ * Written as part of a tutorial. To be removed from the project before final version.
+ * @author Nicholas Wollmann
+ */
 public class ContainerItem extends Container{
 	final InventoryItem inventory;
 	

@@ -4,16 +4,17 @@ import java.util.Random;
 
 import org.lwjgl.opengl.GL11;
 
+import com.rpgcraft.api.Alignment;
+import com.rpgcraft.api.HUDRegistry;
+import com.rpgcraft.api.HudItem;
+import com.rpgcraft.api.RenderAssist;
+import com.rpgcraft.gui.GuiScreenHudItem;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.FoodStats;
-import advancedhud.api.Alignment;
-import advancedhud.api.HUDRegistry;
-import advancedhud.api.HudItem;
-import advancedhud.api.RenderAssist;
-import advancedhud.client.ui.GuiScreenHudItem;
 
 public class HudItemFood extends HudItem {
 

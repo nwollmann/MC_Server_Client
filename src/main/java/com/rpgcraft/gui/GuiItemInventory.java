@@ -14,6 +14,10 @@ import org.lwjgl.opengl.GL12;
 import com.rpgcraft.client.KeyHandler;
 import com.rpgcraft.item.InventoryItem;
 
+/**
+ * More code borrowed from Advanced HUD. YAY!!!
+ * @author Nicholas Wollmann
+ */
 public class GuiItemInventory extends GuiContainer{
 	/** x and y size of the inventory window in pixels. Defined as float, passed as int
 	 * These are used for drawing the player model. */

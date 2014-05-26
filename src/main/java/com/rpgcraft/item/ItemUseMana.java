@@ -7,6 +7,10 @@ import net.minecraft.world.World;
 
 import com.rpgcraft.data.ExtendedPlayer;
 
+/**
+ * Part of a tutorial which I never completed the code for... Should probably do that someday.
+ * @author Nicholas Wollmann
+ */
 public class ItemUseMana extends Item
 {
 	public ItemUseMana() {

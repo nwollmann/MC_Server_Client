@@ -6,6 +6,10 @@ import net.minecraft.entity.player.EntityPlayer;
 
 import com.rpgcraft.RPGCraft;
 
+/**
+ * A packet from a tutorial. Opens up a GUI of the given ID.
+ * @author Nicholas Wollmann
+ */
 public class OpenGuiPacket extends AbstractPacket
 {
 	// this will store the id of the gui to open
